@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora Pookie</title>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="id-project.css" />
+</head>
+
+<body>
+    <!-- NAV -->
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">Built by Blanca</div>
+
+            <nav class="menu">
+                <a href="/">Inicio</a>
+                <a href="/about.html">Acerca de</a>
+                <a class="active" href="/projects.html">Proyectos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="hero">
+                <div class="hero-left">
+                    <h1 class="title">Ajedrez</h1>
+
+                    <p class="subtitle">
+                        Una herramienta simple para entrenar la disciplina y convertir el tiempo en progreso real.
+                    </p>
+
+                    <!-- Tecnologías -->
+                    <div class="tech">
+                        <h3>Tecnologías utilizadas</h3>
+                        <div class="pills">
+                            <span>Java</span>
+                            <span>Swing</span>
+
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/chess-preview.png" alt="Calculadora Pookie">
+            </div>
+
+            <div class="content">
+                <!-- Secciones -->
+                <h2>1. Idea</h2>
+                <p>
+
+
+                    Este ajedrez nació en una clase de programación donde empezamos trabajando métodos y lógica
+                    estructurada. Uno de los ejercicios era hacer un ajedrez muy simple por terminal,. <br><br> En vez
+                    de dejarlo como ejercicio,
+                    me lo tomé como un reto: <br>¿cómo lo desarrollo de forma completa y que además se pueda
+                    visualizar como una app de verdad?<br><br>
+
+                    Ahí es donde el proyecto pasó de ser un ejercicio a ser una aplicación con interfaz, reglas y
+                    experiencia de juego.
+                </p>
+
+                <h2>2. Desarrollo</h2>
+                <p>
+                    A nivel de programación, el objetivo fue construir la base para poder jugar:
+
+                    <br>❖ Gestión del tablero y turno
+                    <br>❖ Movimiento de piezas con sus reglas básicas
+                    <br>❖ Capturas y validaciones
+                    <br>❖ Interacción por clic (selección de casilla y movimiento)
+                    <br><br>El juego incluye las funciones necesarias para jugar una partida normal, aunque no están
+                    implementadas reglas avanzadas como el enroque o el jaque (lo cual dejo como mejora futura).
+                    <br><br>Este proyecto me sirvió para practicar pensamiento lógico, modularidad y organización del
+                    código.
+                </p>
+
+                <h2>3. Diseño</h2>
+                <p>Después de tener la lógica funcionando, quise que se viera “jugable”.
+
+                    Fui investigando y mejorándolo con detalles visuales como:
+
+                    <br>❖ Integrar imágenes (por ejemplo, el título y elementos gráficos)
+                    <br>❖ Añadir una paleta de colores y estilo propio
+                    <br> ❖ Marcar visualmente dónde puede moverse una pieza (feedback directo al usuario)
+                    <br> ❖ Mejorar la lectura de la partida con mensajes y turnos
+
+                </p>
+
+            </div>
+            <!-- Links -->
+            <div class="links-box">
+                <h3>Enlaces de proyectos</h3>
+                <div class="buttons">
+                    <button class="btn primary" id="videoBtn" type="button"><span
+                            class="material-symbols-outlined">open_in_new</span>
+                        Ver demo en video</button>
+
+                    <a href="https://github.com/BlancaPorcelAlonso/Sugar-swipe" class="btn secondary">
+                        <span class="material-symbols-outlined">code</span>
+                        Ver código fuente
+                    </a>
+                </div>
+            </div>
+
+            <div id="videoPanel" class="video-panel" aria-hidden="true">
+                <div class="video-wrap">
+                    <!-- Opción A: Video local (mp4) -->
+                    <video controls preload="metadata">
+                        <source src="assets/video-demo-sugar.mp4" type="video/mp4" />
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </div>
+            </div>
+            <!-- Footer navegación -->
+            <div class="footer-nav">
+                <a href="projects.html">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Todos los proyectos
+                </a>
+                <a href="index.html">De vuelta a casa</a>
+            </div>
+
+
+        </div>
+
+
+    </main>
+    <script src="project-id.js"></script>
+
+</body>
+
+</html>

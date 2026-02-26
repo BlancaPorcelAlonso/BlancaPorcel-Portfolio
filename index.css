@@ -1,0 +1,619 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --border: #706a5f;
+  --bg: #fff;
+  --muted: #444;
+  --radius: 18px;
+  --shadow: 0 16px 30px rgba(0, 0, 0, .12);
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: #000;
+  margin: 0;
+}
+
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg);
+  z-index: 50;
+  background: rgba(211, 210, 210, 0.6); /* semi transparente */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* PAGE */
+.page {
+  padding-top: 90px;
+  /* deja sitio para nav */
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  background-color: #e8f8e8;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 60px 0 45px;
+}
+
+.title {
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: left;
+  margin-left: 0;     /* 👈 fuera margen fijo */
+  text-align: left;
+  padding: 0 60px;    /* 👈 controlas el “aire” sin romper */
+}
+
+
+.subtitle {
+  font-size: 22px;
+  color: var(--muted);
+  max-width: 850px;
+}
+
+#empty {
+  display: none !important;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.project-card {
+  display: block;
+  text-decoration: none;
+  background: #F6F2EA;
+  /* crema muy sutil */
+  color: #111111;
+  /* negro suave */
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+  opacity: 0;
+  transform: translateY(14px);
+
+  opacity: 1;
+  transform: translateY(0);
+
+  background-color: #F6F2EA;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.card-image {
+  height: 210px;
+  width: 100%;
+  background: #f3f3f3;
+  border-bottom: 3px solid var(--border);
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.project-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 26px;
+}
+
+/* badge día */
+.badge {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* título */
+.card-title {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+/* tech tags */
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tech span {
+  font-size: 14px;
+  border: 2px solid #000;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #FDFBF7;
+
+}
+.tech span:hover {
+  background:  #F6F2EA;
+}
+
+/* Ver proyecto */
+.view {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.view svg {
+  width: 18px;
+  height: 18px;
+  transition: transform .2s ease;
+ 
+}
+
+.project-card:hover .view svg {
+  transform: translateX(5px);
+}
+
+
+.content img{
+  width:100%;
+  }
+
+
+.content{
+  display: grid;
+  grid-template-columns: minmax(320px, 1.2fr) minmax(320px, 0.8fr);
+  align-items: stretch;
+}
+
+.text-content{
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   justify-content: flex-start; /* 👈 lo sube */
+  padding-top: 70px;          /* 👈 controla cuánto sube */
+  gap:40px;
+}
+
+.imagen-menu{
+  grid-column: 2/3;
+  background-color: #A8EA84;
+   width: 100%;              /* <-- ocupa su mitad */
+  height: 100%;             /* <-- ocupa toda la altura del layout */
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+
+
+.flip-container {
+  perspective: 1000px;
+  width: 220px;
+  height: 60px;
+}
+
+.flip-btn {
+    position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  transform-style: preserve-3d;
+  transition: transform .3s;
+}
+
+.flip-container:hover .flip-btn {
+  transform: rotateX(-90deg);
+}
+
+.flip-btn span {
+  position: absolute;
+  inset: 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  backface-visibility: hidden;
+}
+
+/* Cara frontal */
+#frontCV {
+  background-color: #A8EA84; /* verde como el tuyo */
+  color: black;
+
+  transform: translateZ(30px); /* 60px / 2 */
+}
+
+/* Cara trasera */
+#backCV {
+ background:#fff;
+  color:#000;
+  border: 1px solid #18191a;
+  transform: rotateX(90deg) translateZ(30px);
+}
+
+
+.menu-btns{
+  display: flex;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+.btn-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+ width: 380px;              /* 👈 más largo */
+  padding: 22px 40px;        /* más aire */
+  border-radius: 8px;
+
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+
+  transition: all 0.35s ease;
+   margin: 0 auto;
+}
+
+/* Hover: se vuelve blanco con borde */
+.btn-code:hover {
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+/* Icono */
+.btn-code .icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Pequeño micro-movimiento moderno */
+.btn-code:hover .icon {
+  transform: translateX(-3px);
+}
+
+
+
+@media (max-width: 984px) and (min-width: 900px){
+
+  /* MANTENEMOS 2 COLUMNAS (no 1) */
+  .content{
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+  }
+
+  /* Texto más compacto y sin tanto aire */
+  .text-content{
+    align-items: flex-start;
+    padding-top: 50px;
+    gap: 26px;
+  }
+
+  /* Título: baja tamaño + quita padding gigante */
+  .title{
+    padding: 0 30px;  /* antes 60px */
+    font-size: 56px;  /* ajusta si quieres 52-58 */
+    text-align: left;
+  }
+
+  .menu-btns{
+    gap: 18px;
+    padding: 0 30px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  /* Botón grande adaptativo (sin pasarse) */
+  .btn-code{
+    width: min(360px, calc(100% - 60px));
+    margin: 0;
+  }
+
+  /* Imagen: que NO se desborde y se ajuste */
+  .imagen-menu{
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .imagen-menu img{
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 700px){
+
+  .content{
+    grid-template-columns: 1fr 0.9fr; /* sigue a 2 columnas */
+    min-height: calc(100vh - 90px);
+    align-items: stretch;            /* 👈 importante para que la derecha estire */
+  }
+
+  .imagen-menu{
+    display: flex;                   /* por si en otro breakpoint la ocultas */
+    height: 100%;
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 0;
+  }
+
+  .imagen-menu img{
+    width: 100%;
+    height: 100%;                    /* 👈 ocupa TODO el alto */
+    object-fit: cover;               /* 👈 recorta bonito */
+    object-position: center;
+    display: block;
+  }
+
+  /* Ajustes del texto para que no se ahogue */
+  .text-content{
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 22px;
+  }
+
+  .title{
+    padding: 0 24px;
+    font-size: clamp(40px, 5vw, 54px);
+    text-align: left;
+  }
+
+  .menu-btns{
+    padding: 0 24px;
+    gap: 14px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .btn-code{
+      width: min(300px, calc(100% - 60px));
+  margin: 0 auto;        /* 👈 lo centra siempre */
+  align-self: center;    /* 👈 por si el flex del padre lo empuja */
+
+  }
+}
+
+@media (max-width: 700px){
+
+  .imagen-menu{
+    display: none;
+  }
+
+  .content{
+    grid-template-columns: 1fr;
+  }
+
+
+  .text-content{
+    align-items: center;
+    justify-content: center;
+    text-align: center;   /* 👈 centra todo el texto */
+    padding: 5px 20px 80px;
+  }
+
+  .title{
+    text-align: center;   /* 👈 importante */
+    padding: 0;           /* quitamos el padding-left de desktop */
+    margin: 0;
+    font-size: clamp(40px, 8vw, 60px);
+    padding-bottom: 20px;
+  }
+
+ /* ✅ BOTONES EN FILA (como querías) */
+  .menu-btns{
+    display: flex;
+    flex-direction: column;     /* 👈 en fila */
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: nowrap;       /* 👈 no se apilan */
+  }
+/* desactivamos flip en móvil pero manteniendo tamaño bonito */
+  .flip-container{
+    width: 200px;            /* 👈 dos botones caben */
+    height: auto;
+    perspective: none;
+  }
+
+  .flip-btn{
+    height: auto;
+    transform: none !important;
+    transition: none;
+  }
+
+  .flip-btn span{
+    position: static;
+    transform: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    padding: 16px 14px;
+    border-radius: 14px;
+    font-size: 16px;
+  }
+
+  #backCV{ display:none; }
+
+
+  /* botón grande */
+  .btn-code{
+    width: min(520px, 92%);
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 450px){
+
+  .nav-inner{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 14px;
+  }
+
+  .brand{
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .menu{
+    gap: 18px;
+    flex-wrap: wrap;          /* por si no cabe */
+    justify-content: center;
+  }
+
+  .menu a{
+    font-size: 14px;
+  }
+
+  /* Ajusta el espacio arriba del contenido porque la nav será más alta */
+  .page{
+    padding-top: 140px; /* antes 90px */
+  }
+}
+
+
+@media (max-width: 700px) and (min-width: 450px){
+
+  .nav-inner{
+    padding: 14px 18px;
+  }
+
+  /* Built by Blanca se adapta progresivamente */
+  .brand{
+    font-size: clamp(22px, 4vw, 30px);
+    line-height: 1;
+  }
+
+  /* Menú más compacto */
+  .menu{
+    gap: 20px;  /* antes 40px */
+  }
+
+  .menu a{
+    font-size: 15px;
+  }
+
+  /* Ajustamos espacio superior del hero */
+  .page{
+    padding-top: 100px;
+  }
+}

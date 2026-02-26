@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora Pookie</title>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="id-project.css" />
+</head>
+
+<body>
+    <!-- NAV -->
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">Built by Blanca</div>
+
+            <nav class="menu">
+                <a href="/">Inicio</a>
+                <a href="/about.html">Acerca de</a>
+                <a class="active" href="/projects.html">Proyectos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="hero">
+                <div class="hero-left">
+                    <h1 class="title">Sugar Swipe</h1>
+
+                    <p class="subtitle">
+                        Juego tipo Match-3 desarrollado en C++, aplicando programación orientada a objetos, gestión de
+                        memoria, estructuras de datos y lógica de juego. </p>
+
+                    <!-- Tecnologías -->
+                    <div class="tech">
+                        <h3>Tecnologías utilizadas</h3>
+                        <div class="pills">
+                            <span>C++</span>
+                            <span>SDL2</span>
+
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/Sugar Swipe.png" alt="Calculadora Pookie">
+            </div>
+
+            <div class="content">
+                <!-- Secciones -->
+                <h2>1. Idea</h2>
+                <p>
+
+
+                    El objetivo inicial era desarrollar un juego tipo match-3 inspirado en Candy Crush, aplicando
+                    estructuras de datos, lógica de matrices y control del flujo del juego.
+
+                    <br><br>Decidí seguir desarrollándolo para:
+
+                    <br>❖Mejorar la estructura interna del código
+                    <br>❖Añadir nuevas mecánicas
+                    <br>❖Implementar 3 niveles con progresión
+                    <br>❖Refinar detalles visuales y de interacción
+                </p>
+
+                <h2>2. Desarrollo</h2>
+                <p>
+                    A nivel técnico, el núcleo del proyecto está en:
+                    <br>❖Gestión del tablero mediante matrices
+                    <br>❖Detección de combinaciones (alineaciones de 3 o más)
+                    <br>❖Eliminación y reorganización de piezas
+                    <br>❖Generación de nuevos elementos
+                    <br>❖Sistema de puntuación
+                    <br>❖Control de niveles
+
+                    <br><br>Además, trabajé:
+                    <br>❖Separación en clases
+                    <br>❖Modularización del código
+                    <br>❖Gestión de eventos e interacción del usuario
+                    <br>❖Optimización de validaciones para evitar estados inconsistentes
+
+                    <br><br> Este proyecto fue clave para consolidar mi lógica algorítmica en C++.
+                </p>
+
+                <h2>3. Diseño</h2>
+                <p>Con el tiempo fui añadiendo mejoras visuales y de experiencia como la mejora de sprites y gráficos y
+                    la implementación de distintos niveles con dificultad creciente
+
+                    Fue un proyecto que me enseñó que programar no es solo hacer funcionar, sino pulir y
+                    mejorar.
+                </p>
+            </div>
+
+            <!-- Links -->
+            <div class="links-box">
+                <h3>Enlaces de proyectos</h3>
+                <div class="buttons">
+                    <button class="btn primary" id="videoBtn" type="button"><span
+                            class="material-symbols-outlined">open_in_new</span>
+                        Ver demo en video</button>
+
+                    <a href="https://github.com/BlancaPorcelAlonso/Sugar-swipe" class="btn secondary">
+                        <span class="material-symbols-outlined">code</span>
+                        Ver código fuente
+                    </a>
+                </div>
+            </div>
+
+            <div id="videoPanel" class="video-panel" aria-hidden="true">
+                <div class="video-wrap">
+                    <!-- Opción A: Video local (mp4) -->
+                    <video controls preload="metadata">
+                        <source src="assets/video-demo-sugar.mp4" type="video/mp4" />
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </div>
+            </div>
+            <!-- Footer navegación -->
+            <div class="footer-nav">
+                <a href="projects.html">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Todos los proyectos
+                </a>
+                <a href="index.html">De vuelta a casa</a>
+            </div>
+
+        </div>
+
+
+    </main>
+    <script src="project-id.js"></script>
+
+</body>
+
+</html>
