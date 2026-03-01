@@ -233,6 +233,16 @@ body {
     gap: 10px;
     padding: 14px 14px;
   }
+   .content-grid{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .get-to-know-me{grid-column: auto;
+    grid-row: auto;}
+    .lenguages{grid-column: auto;
+    grid-row: auto;}
+
 
   .brand {
     font-size: 30px;
@@ -264,6 +274,15 @@ body {
   .nav-inner {
     padding: 14px 18px;
   }
+  .content-grid{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .get-to-know-me{grid-column: auto;
+    grid-row: auto;}
+    .lenguages{grid-column: auto;
+    grid-row: auto;}
 
   /* Built by Blanca se adapta progresivamente */
   .brand {
@@ -551,6 +570,7 @@ h2 {
 
 .technology-stack {
   grid-area: 1 / 1 / 2 / 3;
+  text-align: center;
 }
 
 .get-to-know-me {
@@ -585,7 +605,7 @@ h2 {
   .quick-overview {
     grid-template-columns: repeat(2, 1fr);
   }
-  .hero-img{display: none !important;}
+
 }
 
 @media (max-width: 520px) {
@@ -680,6 +700,12 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+}
+
+@media (max-width: 750px){ 
+  .hero-img{
+    display: none !important;
+  }
 }
 
 @media (max-width: 900px){
@@ -842,4 +868,116 @@ h2 {
   margin-left: 0px;       
   display: block;
   grid-area: 1 / 1 / 2 / 2;
+}
+
+@media (max-width: 900px){
+  .hero-img{width: 85%;}
+}
+@media (max-width: 800px) and (min-width: 700px){
+  .hero-img{width: 90%;}
+  .header-content{margin-top: 20px; margin-bottom: 10px;}
+}
+
+
+
+@media (max-width: 750px){
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: auto;          
+    padding: 80px 20px 60px;  
+    text-align: center;      
+  }
+
+  .header-content{
+    max-width: 600px;
+  }
+
+  .hero-list{
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .hero-buttons{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}
+
+
+
+@media (max-width: 600px){
+
+  .hero-name{
+    font-size: clamp(36px, 8vw, 48px);
+  }
+
+  .hero-role{
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  .hero-list{
+    font-size: 15px;
+  }
+
+  .btn-primary{
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 750px){
+
+  /* ocultamos los bullets y lo dejamos como texto */
+  .hero-list{
+    list-style: none;
+    padding-left: 0;
+    margin: 14px 0 22px;
+
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    text-align: center;
+  }
+
+  .hero-list li{
+    display: inline;          
+  }
+
+}
+
+@media (max-width: 750px){
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: auto;        
+    padding: 0px 18px 34px;  
+    margin: 0;                
+    text-align: center;
+  }
+
+  .header-content{
+    margin-top: 0;
+  }
+
+  .hero-role{
+    margin-bottom: 16px;
+  }
+
+  .hero-buttons{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 }
