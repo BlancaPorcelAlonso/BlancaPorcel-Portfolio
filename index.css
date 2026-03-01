@@ -28,10 +28,11 @@ body {
   width: 100%;
   background: var(--bg);
   z-index: 50;
-  background: rgba(211, 210, 210, 0.6); /* semi transparente */
+  background: rgba(211, 210, 210, 0.6);
+  /* semi transparente */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 
@@ -76,13 +77,13 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
   animation: fadeInUp 0.6s ease-out forwards;
   background-image: url(assets/ChatGPT\ Image\ 28\ feb\ 2026\,\ 16_33_26.png);
 
-  
+
 }
 
 @keyframes fadeInUp {
-  from { 
+  from {
     opacity: 0;
-    transform: translateY(10px); 
+    transform: translateY(10px);
   }
 
   to {
@@ -108,9 +109,11 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
   margin-bottom: 30px;
   color: #000;
   text-align: left;
-  margin-left: 0;     /* 👈 fuera margen fijo */
+  margin-left: 0;
+  /* 👈 fuera margen fijo */
   text-align: left;
-  padding: 0 60px;    /* 👈 controlas el “aire” sin romper */
+  padding: 0 60px;
+  /* 👈 controlas el “aire” sin romper */
   margin-top: 30px;
 }
 
@@ -227,8 +230,9 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
   background: #FDFBF7;
 
 }
+
 .tech span:hover {
-  background:  #F6F2EA;
+  background: #F6F2EA;
 }
 
 /* Ver proyecto */
@@ -244,7 +248,7 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
   width: 18px;
   height: 18px;
   transition: transform .2s ease;
- 
+
 }
 
 .project-card:hover .view svg {
@@ -252,32 +256,36 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 
-.content img{
-  width:100%;
-  }
+.content img {
+  width: 100%;
+}
 
 
-.content{
+.content {
   display: grid;
   grid-template-columns: minmax(320px, 1.2fr) minmax(320px, 0.8fr);
   align-items: stretch;
 }
 
-.text-content{
+.text-content {
   grid-column: 1/2;
   display: flex;
   flex-direction: column;
   align-items: center;
-   justify-content: flex-start; /* 👈 lo sube */
-  padding-top: 70px;          /* 👈 controla cuánto sube */
-  gap:40px;
+  justify-content: flex-start;
+  /* 👈 lo sube */
+  padding-top: 70px;
+  /* 👈 controla cuánto sube */
+  gap: 40px;
 }
 
-.imagen-menu{
+.imagen-menu {
   grid-column: 2/3;
   background-color: #a6c18e;
-   width: 100%;              /* <-- ocupa su mitad */
-  height: 100%;             /* <-- ocupa toda la altura del layout */
+  width: 100%;
+  /* <-- ocupa su mitad */
+  height: 100%;
+  /* <-- ocupa toda la altura del layout */
   display: flex;
   justify-content: end;
   align-items: end;
@@ -292,7 +300,7 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .flip-btn {
-    position: relative;
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -308,9 +316,9 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
 .flip-btn span {
   position: absolute;
   inset: 0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -319,22 +327,24 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
 
 /* Cara frontal */
 #frontCV {
-  background-color: #a6c18e; /* verde como el tuyo */
+  background-color: #a6c18e;
+  /* verde como el tuyo */
   color: black;
 
-  transform: translateZ(30px); /* 60px / 2 */
+  transform: translateZ(30px);
+  /* 60px / 2 */
 }
 
 /* Cara trasera */
 #backCV {
- background:#fff;
-  color:#000;
+  background: #fff;
+  color: #000;
   border: 1px solid #18191a;
   transform: rotateX(90deg) translateZ(30px);
 }
 
 
-.menu-btns{
+.menu-btns {
   display: flex;
   gap: 60px;
   margin-bottom: 20px;
@@ -351,8 +361,10 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
   justify-content: center;
   gap: 10px;
 
- width: 380px;              /* 👈 más largo */
-  padding: 22px 40px;        /* más aire */
+  width: 380px;
+  /* 👈 más largo */
+  padding: 22px 40px;
+  /* más aire */
   border-radius: 8px;
 
   font-weight: 600;
@@ -364,7 +376,7 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
   border: 2px solid #000;
 
   transition: all 0.35s ease;
-   margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* Hover: se vuelve blanco con borde */
@@ -387,29 +399,31 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
 
 
 
-@media (max-width: 984px) and (min-width: 900px){
+@media (max-width: 984px) and (min-width: 900px) {
 
   /* MANTENEMOS 2 COLUMNAS (no 1) */
-  .content{
+  .content {
     grid-template-columns: 1.15fr 0.85fr;
     align-items: center;
   }
 
   /* Texto más compacto y sin tanto aire */
-  .text-content{
+  .text-content {
     align-items: flex-start;
     padding-top: 50px;
     gap: 26px;
   }
 
   /* Título: baja tamaño + quita padding gigante */
-  .title{
-    padding: 0 30px;  /* antes 60px */
-    font-size: 56px;  /* ajusta si quieres 52-58 */
+  .title {
+    padding: 0 30px;
+    /* antes 60px */
+    font-size: 56px;
+    /* ajusta si quieres 52-58 */
     text-align: left;
   }
 
-  .menu-btns{
+  .menu-btns {
     gap: 18px;
     padding: 0 30px;
     justify-content: flex-start;
@@ -417,19 +431,19 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
   }
 
   /* Botón grande adaptativo (sin pasarse) */
-  .btn-code{
+  .btn-code {
     width: min(360px, calc(100% - 60px));
     margin: 0;
   }
 
   /* Imagen: que NO se desborde y se ajuste */
-  .imagen-menu{
+  .imagen-menu {
     justify-content: center;
     align-items: center;
     padding: 0;
   }
 
-  .imagen-menu img{
+  .imagen-menu img {
     width: 100%;
     max-width: 420px;
     height: auto;
@@ -437,107 +451,116 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
   }
 }
 
-@media (max-width: 1100px) and (min-width: 700px){
+@media (max-width: 1100px) and (min-width: 700px) {
 
-  .content{
-    grid-template-columns: 1fr 0.9fr; /* sigue a 2 columnas */
+  .content {
+    grid-template-columns: 1fr 0.9fr;
+    /* sigue a 2 columnas */
     min-height: calc(100vh - 90px);
-    align-items: stretch;            /*  importante para que la derecha estire */
+    align-items: stretch;
+    /*  importante para que la derecha estire */
   }
 
-  .imagen-menu{
-    display: flex;                   /* por si en otro breakpoint la ocultas */
+  .imagen-menu {
+    display: flex;
+    /* por si en otro breakpoint la ocultas */
     height: 100%;
     align-items: stretch;
     justify-content: stretch;
     padding: 0;
   }
 
-  .imagen-menu img{
+  .imagen-menu img {
     width: 100%;
-    height: 100%;                    /* ocupa TODO el alto */
-    object-fit: cover;               /* recorta bonito */
+    height: 100%;
+    /* ocupa TODO el alto */
+    object-fit: cover;
+    /* recorta bonito */
     object-position: center;
     display: block;
   }
 
   /* Ajustes del texto para que no se ahogue */
-  .text-content{
+  .text-content {
     align-items: flex-start;
     justify-content: center;
     padding: 40px 0;
     gap: 22px;
   }
 
-  .title{
+  .title {
     padding: 0 24px;
     font-size: clamp(40px, 5vw, 54px);
     text-align: left;
   }
 
-  .menu-btns{
+  .menu-btns {
     padding: 0 24px;
     gap: 14px;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
 
-  .btn-code{
-      width: min(300px, calc(100% - 60px));
-  margin: 0 auto;        /*  lo centra siempre */
-  align-self: center;    /* por si el flex del padre lo empuja */
+  .btn-code {
+    width: min(300px, calc(100% - 60px));
+    margin: 0 auto;
+    /*  lo centra siempre */
+    align-self: center;
+    /* por si el flex del padre lo empuja */
 
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
 
-  .imagen-menu{
+  .imagen-menu {
     display: none;
   }
 
-  .content{
+  .content {
     grid-template-columns: 1fr;
   }
 
 
-  .text-content{
+  .text-content {
     align-items: center;
     justify-content: center;
-    text-align: center;  
+    text-align: center;
     padding: 5px 20px 80px;
   }
 
-  .title{
-    text-align: center;   
-    padding: 0;           /* quitamos el padding-left de desktop */
+  .title {
+    text-align: center;
+    padding: 0;
+    /* quitamos el padding-left de desktop */
     margin: 0;
     font-size: clamp(40px, 8vw, 60px);
     padding-bottom: 20px;
   }
 
-  .menu-btns{
+  .menu-btns {
     display: flex;
-    flex-direction: column;      
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    flex-wrap: nowrap;       
+    flex-wrap: nowrap;
   }
-/* desactivamos flip en móvil pero manteniendo tamaño bonito */
-  .flip-container{
-    width: 200px;            
+
+  /* desactivamos flip en móvil pero manteniendo tamaño bonito */
+  .flip-container {
+    width: 200px;
     height: auto;
     perspective: none;
   }
 
-  .flip-btn{
+  .flip-btn {
     height: auto;
     transform: none !important;
     transition: none;
   }
 
-  .flip-btn span{
+  .flip-btn span {
     position: static;
     transform: none !important;
     display: flex;
@@ -550,72 +573,150 @@ border-bottom: 1px solid rgba(0,0,0,0.05);
     font-size: 16px;
   }
 
-  #backCV{ display:none; }
+  #backCV {
+    display: none;
+  }
 
 
   /* botón grande */
-  .btn-code{
+  .btn-code {
     width: min(520px, 92%);
     margin: 0 auto;
   }
 }
 
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
 
-  .nav-inner{
+  .nav-inner {
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 14px 14px;
   }
 
-  .brand{
+  .brand {
     font-size: 30px;
     line-height: 1;
     text-align: center;
   }
 
-  .menu{
+  .menu {
     gap: 18px;
-    flex-wrap: wrap;          /* por si no cabe */
+    flex-wrap: wrap;
+    /* por si no cabe */
     justify-content: center;
   }
 
-  .menu a{
+  .menu a {
     font-size: 14px;
   }
 
   /* Ajusta el espacio arriba del contenido porque la nav será más alta */
-  .page{
-    padding-top: 140px; /* antes 90px */
+  .page {
+    padding-top: 140px;
+    /* antes 90px */
   }
 }
 
 
-@media (max-width: 700px) and (min-width: 450px){
+@media (max-width: 700px) and (min-width: 450px) {
 
-  .nav-inner{
+  .nav-inner {
     padding: 14px 18px;
   }
 
   /* Built by Blanca se adapta progresivamente */
-  .brand{
+  .brand {
     font-size: clamp(22px, 4vw, 30px);
     line-height: 1;
   }
 
   /* Menú más compacto */
-  .menu{
-    gap: 20px;  /* antes 40px */
+  .menu {
+    gap: 20px;
+    /* antes 40px */
   }
 
-  .menu a{
+  .menu a {
     font-size: 15px;
   }
 
   /* Ajustamos espacio superior del hero */
-  .page{
+  .page {
     padding-top: 100px;
+  }
+}
+
+
+
+/* FOOTER */
+
+.site-footer {
+  background: #2e2e2e;
+  color: #bbb;
+  padding: 30px 22px 30px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  padding-bottom: 30px;
+}
+
+.footer-brand {
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-location,
+.footer-update {
+  margin-bottom: 6px;
+  color: #888;
+}
+
+.footer-right {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: opacity .2s ease;
+}
+
+.footer-link:hover {
+  opacity: .7;
+}
+
+/* bottom line */
+.footer-bottom {
+  max-width: 1280px;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
   }
 }
