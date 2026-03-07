@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recipe Finder</title>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="id-project.css" />
+</head>
+
+<body>
+    <!-- NAV -->
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">Built by Blanca</div>
+
+            <nav class="menu">
+                <a href="/">Inicio</a>
+                <a href="/about.html">Acerca de</a>
+                <a class="active" href="/projects.html">Proyectos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="hero">
+                <div class="hero-left">
+                    <h1 class="title">Recipe Finder</h1>
+
+                    <p class="subtitle">
+                        Aplicación de escritorio que 
+                        permite buscar recetas por ingrediente utilizando una API externa y 
+                        visualizar los resultados en una interfaz gráfica interactiva. </p>
+
+                    <!-- Tecnologías -->
+                    <div class="tech">
+                        <h3>Tecnologías utilizadas</h3>
+                        <div class="pills">
+                            <span>python</span>
+                            <span>customktinker</span>
+                            <span> TheMealDB API</span>
+
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/recipe-menu.png" alt="Calculadora Pookie">
+            </div>
+
+            <div class="content">
+                <!-- Secciones -->
+                <h2>1. Idea</h2>
+                <p>
+                    Este proyecto nace de dos ideas principales: quería entender qué son las APIs y cómo integrarlas, y
+                    al mismo tiempo seguir practicando Python para no perder fluidez en el
+                    lenguaje.<br><br>
+
+                    La idea era crear una pequeña aplicación funcional que permitiera consultar recetas a partir de un
+                    ingrediente introducido por el usuario. De esta forma podía trabajar con consumo de APIs externas y
+                    manejo de datos en formato JSON.
+
+                    <br><br>El objetivo no era solo obtener información, sino convertir esos datos en una experiencia
+                    visual utilizable dentro de una app de escritorio.
+
+                </p>
+
+                <h2>2. Desarrollo</h2>
+                <p>
+                    La aplicación está desarrollada en Python y utiliza la API pública TheMealDB, que permite consultar
+                    recetas y obtener información como el nombre del plato, la imagen o las instrucciones de
+                    preparación.<br><br>
+
+                    Al hacer clic sobre una receta, se abre una vista detallada con las instrucciones completas,
+                    permitiendo leer el proceso de preparación dentro de la propia aplicación. <br><br>
+
+                    Tecnologías utilizadas:
+                    <br>❖Python
+                    <br>❖Requests
+                    <br>❖CustomTkinter
+                    <br>❖Pillow (gestión de imágenes)
+                    <br>❖TheMealDB API
+                    <br><br>
+                    El proyecto en este momento se encuentra en su versión 1.0. Mi proposito es implementar futuras mejoras.
+                </p>
+
+                <h2>3. Diseño</h2>
+                <p>El diseño de la interfaz busca una estética inspirada en interfaces sencillas
+                    y claras, donde la información principal es fácil de identificar. <br><br>
+
+                    Para la interfaz gráfica se utiliza CustomTkinter, lo que permite crear una aplicación ligera con
+                    una interfaz más moderna que la ofrecida por Tkinter tradicional.<br><br>
+
+                    La estructura de la aplicación se divide en tres áreas principales:<br>
+
+                    <br>❖ Zona de búsqueda, donde el usuario introduce el ingrediente
+
+                    <br>❖ Tarjeta central, donde se muestran las recetas encontradas
+
+                    <br>❖ Botones de navegación, para recorrer los distintos resultados
+
+                    <br><br>Las recetas se presentan dentro de tarjetas visuales, combinando imagen y nombre del plato, y al
+                    abrir una receta se muestra una segunda tarjeta con las instrucciones completas.
+                    
+                </p>
+            </div>
+
+            <!-- Links -->
+            <div class="links-box">
+                <h3>Enlaces de proyectos</h3>
+                <div class="buttons">
+                    <button class="btn primary" id="videoBtn" type="button"><span
+                            class="material-symbols-outlined">open_in_new</span>
+                        Ver demo en video</button>
+
+                    <a href="https://github.com/BlancaPorcelAlonso/recipe-finder" class="btn secondary">
+                        <span class="material-symbols-outlined">code</span>
+                        Ver código fuente
+                    </a>
+                </div>
+            </div>
+
+            <div id="videoPanel" class="video-panel" aria-hidden="true">
+                <div class="video-wrap">
+                    <!-- Opción A: Video local (mp4) -->
+                    <video controls preload="metadata">
+                        <source src="assets/recipes-demo.mp4" type="video/mp4" />
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </div>
+            </div>
+            <!-- Footer navegación -->
+            <div class="footer-nav">
+                <a href="projects.html">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Todos los proyectos
+                </a>
+                <a href="index.html">De vuelta a casa</a>
+            </div>
+
+        </div>
+
+
+    </main>
+    <script src="project-id.js"></script>
+
+</body>
+
+</html>
